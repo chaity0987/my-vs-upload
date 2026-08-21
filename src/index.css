@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+  
+  /* Blood donation & Thalassemia palette */
+  --color-blood-50: #fff1f2;
+  --color-blood-100: #ffe4e6;
+  --color-blood-200: #fecdd3;
+  --color-blood-300: #fda4af;
+  --color-blood-400: #fb7185;
+  --color-blood-500: #f43f5e;
+  --color-blood-600: #e11d48;
+  --color-blood-700: #be123c;
+  --color-blood-800: #9f1239;
+  --color-blood-900: #881337;
+  --color-blood-950: #4c0519;
+
+  /* Theme Canvas Colors (replacing plain white with warm blood-care tints) */
+  --color-canvas: #fcf4f4;
+  --color-surface: #fff8f8;
+  --color-surface-warm: #fef2f2;
+  --color-surface-card: #ffffff;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #1e293b;
+    background-color: #fbf2f2;
+    background-image: radial-gradient(at 0% 0%, rgba(254, 226, 226, 0.4) 0px, transparent 50%),
+                      radial-gradient(at 100% 100%, rgba(254, 205, 211, 0.3) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fce7e7;
+}
+::-webkit-scrollbar-thumb {
+  background: #fca5a5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* Blood pulse and subtle glow effects */
+@keyframes bloodGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(220, 38, 38, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.4);
+  }
+}
+
+.blood-glow {
+  animation: bloodGlow 3s ease-in-out infinite;
+}
+
+

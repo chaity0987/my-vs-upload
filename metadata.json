@@ -1,0 +1,6 @@
+{
+  "name": "Thalcare BD",
+  "description": "Blood Donor Management System for Thalassemia Patients in Bangladesh - Connecting Care, Blood & Hope.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
